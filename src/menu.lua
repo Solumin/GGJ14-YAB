@@ -22,6 +22,7 @@ function menu:draw()
     if blinkVisible then
         love.graphics.setColor(unpack(blinkColor))
         love.graphics.rectangle('fill', unpack(blinkRect))
+        love.graphics.setColor(255,255,255)
     end
 end
 
@@ -39,7 +40,6 @@ end
 
 function menu:enter()
     love.graphics.setBackgroundColor(0,0,0)
-    love.graphics.setColorMode('replace')
     blinkHandler = menuTimer:addPeriodic(0.8, function()
         blinkVisible = not blinkVisible
     end)

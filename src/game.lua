@@ -125,8 +125,6 @@ end
 
 function print_hud()
     r,g,b,a = love.graphics.getColor()
-    m = love.graphics.getColorMode()
-    love.graphics.setColorMode('modulate')
     love.graphics.setFont(hudFont)
     love.graphics.setColor(200, 0, 75)
 
@@ -137,7 +135,6 @@ function print_hud()
 
     love.graphics.printf("Lives: " .. ship.lives, 0, 0, 800, "right")
     love.graphics.setColor(r,g,b,a)
-    love.graphics.setColorMode(m)
 end
 
 return game
