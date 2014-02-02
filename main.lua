@@ -7,8 +7,6 @@ gs.states["game_over"] = require 'src/game_over'
 gs.states["credits"] = require 'src/credits'
 
 function love.load()
-    love.graphics.setCaption("You Are a Battleship!")
-
     gs.registerEvents()
     gs.switch(gs.states["menu"])
 end
